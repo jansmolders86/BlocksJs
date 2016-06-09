@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Orion</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="js/vendor/three.min.js"></script>
+    <script type="text/javascript" src="js/vendor/Detector.js"></script>
+
+    <script src="//js.leapmotion.com/leap-0.6.4.js"></script>
+    <script type="text/javascript" src="js/vendor/leap.bone-hand.js"></script>
+
+    <script type="text/javascript" src="js/vendor/OrbitControls.js"></script>
+
+    <script type="text/javascript" src="js/vendor/DeviceOrientationControls.js"></script>
+    <script type="text/javascript" src="js/vendor/StereoEffect.js"></script>
+
+    <script type="text/javascript" src="js/vendor/physi.js"></script>
+    <script>
+        var renderVR = false;
+        var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+        if(renderVR){
+            document.addEventListener('DOMContentLoaded', function() {
+                document.body.classList.add('vr');
+            });
+        }
+        if(supportsTouch){
+            document.addEventListener('DOMContentLoaded', function() {
+                document.body.classList.add('touch');
+            });
+        }
+    </script>
+
+
+    <!-- shaders -->
+    <script type="x-shader/x-vertex" id="vertexShader">
+            varying vec3 worldPosition;
+            void main() {
+                vec4 mPosition = modelMatrix * vec4( position, 1.0 );
+                gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+                worldPosition = mPosition.xyz;
+            }
+        </script>
+
+    <script type="x-shader/x-fragment" id="fragmentShader">
+            uniform vec3 topColor;
+            uniform vec3 bottomColor;
+            uniform float offset;
+            uniform float exponent;
+            varying vec3 worldPosition;
+            void main() {
+                float h = normalize( worldPosition + offset ).y;
+                gl_FragColor = vec4( mix( bottomColor, topColor, max( pow( h, exponent ), 0.0 ) ), 1.0 );
+            }
+        </script>
+</head>
+
+<body oncontextmenu="return false;">
+<div class="info">Change gravity with + / -, use mouse to manipulate.</div>
+<button id="add-plank" class="btn" >Add Plank</button>
+<button id="add-box" class="btn" >Add Box</button>
+<div class="gravity">Gravity set at:
+    <button class="btn" id="btn-zero">Zero G</button>
+    <button class="btn" id="btn-less">less </button>
+    <span id="gravity"></span>
+    <button class="btn"  id="btn-more">more </button>
+    <button class="btn"  id="btn-lots">Lots of G</button>
+</div>
+<div id="viewport"></div>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/setupVR.js"></script>
+</body>
+
+</html>

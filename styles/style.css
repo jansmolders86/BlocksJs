@@ -1,0 +1,73 @@
+body,html{
+    margin:0; padding:0;overflow: hidden;
+}
+
+.info,
+.gravity,
+#gravity{
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color:transparent;
+    pointer-events: none;
+}
+.info,
+.gravity,
+.btn{
+    font-family: arial;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+}
+
+.info,
+.gravity,
+.btn#add-box,
+.btn#add-plank{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+.gravity,
+.btn#add-box,
+.btn#add-plank{
+    left: auto;
+    right: 40px;
+}
+
+.btn#add-plank{
+    right: 160px;
+}
+
+.btn#add-box,
+.btn#add-plank{
+    bottom: 150px;
+}
+
+.btn{
+    pointer-events: auto;
+    margin: 0 10px;
+    border: 1px solid #f5f5f5;
+    cursor:pointer;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active{
+    background: #fff;
+    color: #000;
+}
+
+.vr .info,
+.vr .gravity,
+.vr .btn{
+    display: none;
+}
+
+
+.touch .info{
+    display: none;
+}
