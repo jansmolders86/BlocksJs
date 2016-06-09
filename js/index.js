@@ -6,12 +6,12 @@ Physijs.scripts.ammo = 'ammo.js';
 
 // global variables
 var scene, camera, renderer, controls, sprite, box, material,effect, element, controller, hemiLight, dirLight;
-var gravity = -82;
+var gravity = -50;
 var textureLoader = new THREE.TextureLoader();
 var screenWidth = window.innerWidth;
 var screenHeight = window.innerHeight;
 var container = document.getElementById('viewport');
-var boxStartHeight = 100;
+var boxStartHeight = 80;
 var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 
 var lightDirection = 30;
@@ -32,13 +32,10 @@ if (webglAvailable) {
 
 window.addEventListener('resize', onWindowResize, false);
 
-Leap.loop()
-    //    .use('transform', {vr: true})
-    .use('boneHand', {
-        targetEl: document.body,
-        arm: true,
-        opacity: 0.8
-    });
+window.widgets = new LeapWidgets(window.scene);
+widgets.initLeapHand(
+    {sampleRecording: 'recordings/knob.lz'}
+);
 
 // Scene
 //
@@ -151,7 +148,7 @@ function setUpCamera(){
         45,
         window.innerWidth / window.innerHeight,
         1,
-        500
+        10000
     );
     camera.position.x = -50;
     camera.position.y = 10;
@@ -229,6 +226,14 @@ function createGround() {
 function createObject(type) {
     var box_geometry, lengthDimensions, thickness;
     var randomDimensions = Math.floor(Math.random() * 6) + 1  ;
+    var creationMaterial = new THREE.MeshBasicMaterial({
+            color: 0xe97325,
+            shading: THREE.FlatShading,
+            wireframe: true,
+            wireframeLinewidth : 20
+        },   .6, // medium friction
+        .3 // low restitution
+    );
 
     if(type === 'box'){
         lengthDimensions = randomDimensions;
@@ -239,15 +244,10 @@ function createObject(type) {
     }
 
     box_geometry = new THREE.BoxGeometry(randomDimensions, lengthDimensions, thickness);
-    var material = Physijs.createMaterial(
-        new THREE.MeshPhongMaterial({map: textureLoader.load( "images/cube.jpg" ), shading: THREE.FlatShading}),
-        .6, // medium friction
-        .3 // low restitution
-    );
 
     var box = new Physijs.BoxMesh(
         box_geometry,
-        material
+        creationMaterial
     );
     box.collisions = 0;
     box.position.set(
@@ -264,6 +264,9 @@ function createObject(type) {
 
     box.receiveShadow = true;
     box.castShadow = true;
+    box.addEventListener( 'collision', function(){
+        handleCollision(box)
+    });
     scene.add(box);
     blocks.push(box);
 }
@@ -271,6 +274,13 @@ function createObject(type) {
 function activeIndicator(){
     var spriteMaterial = new THREE.SpriteMaterial( { map: textureLoader.load( "images/glow.png" ), color: 0xe97325, transparent: true, blending: THREE.AdditiveBlending} );
     sprite = new THREE.Sprite( spriteMaterial );
+}
+
+function handleCollision(box){
+    box.material.color.setHex(0x4f4f4f);
+    box.material.wireframe = false;
+    box.material.map = textureLoader.load( "images/cube.jpg" );
+    box.material.needsUpdate = true;
 }
 
 function animate() {
@@ -416,7 +426,7 @@ function changeGravity(type){
     } else if(type === 'zero'){
         gravity = 0;
     } else if(type === 'lots'){
-        gravity =  -150;
+        gravity =  -50;
     }
 
     document.getElementById('gravity').innerHTML = gravity;

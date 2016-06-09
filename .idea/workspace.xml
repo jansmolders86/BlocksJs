@@ -24,25 +24,24 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0703125">
-              <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7020089">
+              <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
               <folding>
                 <element signature="n#!!block;n#init#0" expanded="false" />
                 <element signature="n#!!block;n#createScene#0" expanded="false" />
                 <element signature="n#!!block;n#createSkyBox#0" expanded="false" />
-                <element signature="n#!!block;n#setUpCamera#0" expanded="false" />
                 <element signature="n#!!block;n#createLights#0" expanded="false" />
                 <element signature="n#!!block;n#setOrientationControls#0" expanded="false" />
                 <element signature="n#!!block;n#createGround#0" expanded="false" />
                 <element signature="n#!!block;n#createObject#0" expanded="false" />
                 <element signature="n#!!block;n#activeIndicator#0" expanded="false" />
+                <element signature="n#!!block;n#handleCollision#0" expanded="false" />
                 <element signature="n#!!block;n#animate#0" expanded="false" />
                 <element signature="n#!!block;n#initEventHandling#0" expanded="false" />
                 <element signature="n#!!block;n#keyboardEvents#0" expanded="false" />
                 <element signature="n#!!block;n#letGoHandler#0" expanded="false" />
                 <element signature="n#!!block;n#dragHandler#0" expanded="false" />
                 <element signature="n#!!block;n#grabHandler#0" expanded="false" />
-                <element signature="n#!!block;n#changeGravity#0" expanded="false" />
                 <element signature="n#!!block;n#onWindowResize#0" expanded="false" />
               </folding>
             </state>
@@ -62,8 +61,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="11.653846">
-              <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
+            <state vertical-scroll-proportion="-9.153846">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -88,8 +87,8 @@
         <option value="$PROJECT_DIR$/collisions.html" />
         <option value="$PROJECT_DIR$/styles/style.css" />
         <option value="$PROJECT_DIR$/js/setupVR.js" />
-        <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/index.js" />
       </list>
     </option>
   </component>
@@ -129,7 +128,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -177,26 +175,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="orionjs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -323,19 +304,67 @@
             <element signature="n#!!block;n#init#0" expanded="false" />
             <element signature="n#!!block;n#createScene#0" expanded="false" />
             <element signature="n#!!block;n#createSkyBox#0" expanded="false" />
-            <element signature="n#!!block;n#setUpCamera#0" expanded="false" />
             <element signature="n#!!block;n#createLights#0" expanded="false" />
             <element signature="n#!!block;n#setOrientationControls#0" expanded="false" />
             <element signature="n#!!block;n#createGround#0" expanded="false" />
             <element signature="n#!!block;n#createObject#0" expanded="false" />
             <element signature="n#!!block;n#activeIndicator#0" expanded="false" />
+            <element signature="n#!!block;n#handleCollision#0" expanded="false" />
             <element signature="n#!!block;n#animate#0" expanded="false" />
             <element signature="n#!!block;n#initEventHandling#0" expanded="false" />
             <element signature="n#!!block;n#keyboardEvents#0" expanded="false" />
             <element signature="n#!!block;n#letGoHandler#0" expanded="false" />
             <element signature="n#!!block;n#dragHandler#0" expanded="false" />
             <element signature="n#!!block;n#grabHandler#0" expanded="false" />
-            <element signature="n#!!block;n#changeGravity#0" expanded="false" />
+            <element signature="n#!!block;n#onWindowResize#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/setupVR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#init#0" expanded="false" />
+            <element signature="n#!!block;n#createScene#0" expanded="false" />
+            <element signature="n#!!block;n#createSkyBox#0" expanded="false" />
+            <element signature="n#!!block;n#createLights#0" expanded="false" />
+            <element signature="n#!!block;n#setOrientationControls#0" expanded="false" />
+            <element signature="n#!!block;n#createGround#0" expanded="false" />
+            <element signature="n#!!block;n#createObject#0" expanded="false" />
+            <element signature="n#!!block;n#activeIndicator#0" expanded="false" />
+            <element signature="n#!!block;n#handleCollision#0" expanded="false" />
+            <element signature="n#!!block;n#animate#0" expanded="false" />
+            <element signature="n#!!block;n#initEventHandling#0" expanded="false" />
+            <element signature="n#!!block;n#keyboardEvents#0" expanded="false" />
+            <element signature="n#!!block;n#letGoHandler#0" expanded="false" />
+            <element signature="n#!!block;n#dragHandler#0" expanded="false" />
+            <element signature="n#!!block;n#grabHandler#0" expanded="false" />
             <element signature="n#!!block;n#onWindowResize#0" expanded="false" />
           </folding>
         </state>
@@ -365,19 +394,18 @@
             <element signature="n#!!block;n#init#0" expanded="false" />
             <element signature="n#!!block;n#createScene#0" expanded="false" />
             <element signature="n#!!block;n#createSkyBox#0" expanded="false" />
-            <element signature="n#!!block;n#setUpCamera#0" expanded="false" />
             <element signature="n#!!block;n#createLights#0" expanded="false" />
             <element signature="n#!!block;n#setOrientationControls#0" expanded="false" />
             <element signature="n#!!block;n#createGround#0" expanded="false" />
             <element signature="n#!!block;n#createObject#0" expanded="false" />
             <element signature="n#!!block;n#activeIndicator#0" expanded="false" />
+            <element signature="n#!!block;n#handleCollision#0" expanded="false" />
             <element signature="n#!!block;n#animate#0" expanded="false" />
             <element signature="n#!!block;n#initEventHandling#0" expanded="false" />
             <element signature="n#!!block;n#keyboardEvents#0" expanded="false" />
             <element signature="n#!!block;n#letGoHandler#0" expanded="false" />
             <element signature="n#!!block;n#dragHandler#0" expanded="false" />
             <element signature="n#!!block;n#grabHandler#0" expanded="false" />
-            <element signature="n#!!block;n#changeGravity#0" expanded="false" />
             <element signature="n#!!block;n#onWindowResize#0" expanded="false" />
           </folding>
         </state>
@@ -403,7 +431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -465,33 +492,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.653846">
-          <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0703125">
-          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7020089">
+          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#init#0" expanded="false" />
             <element signature="n#!!block;n#createScene#0" expanded="false" />
             <element signature="n#!!block;n#createSkyBox#0" expanded="false" />
-            <element signature="n#!!block;n#setUpCamera#0" expanded="false" />
             <element signature="n#!!block;n#createLights#0" expanded="false" />
             <element signature="n#!!block;n#setOrientationControls#0" expanded="false" />
             <element signature="n#!!block;n#createGround#0" expanded="false" />
             <element signature="n#!!block;n#createObject#0" expanded="false" />
             <element signature="n#!!block;n#activeIndicator#0" expanded="false" />
+            <element signature="n#!!block;n#handleCollision#0" expanded="false" />
             <element signature="n#!!block;n#animate#0" expanded="false" />
             <element signature="n#!!block;n#initEventHandling#0" expanded="false" />
             <element signature="n#!!block;n#keyboardEvents#0" expanded="false" />
             <element signature="n#!!block;n#letGoHandler#0" expanded="false" />
             <element signature="n#!!block;n#dragHandler#0" expanded="false" />
             <element signature="n#!!block;n#grabHandler#0" expanded="false" />
-            <element signature="n#!!block;n#changeGravity#0" expanded="false" />
             <element signature="n#!!block;n#onWindowResize#0" expanded="false" />
           </folding>
         </state>
