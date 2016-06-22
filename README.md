@@ -17,6 +17,7 @@ TODO:
 * Replace HTML buttons with ThreeJs rendered feedback
 * Get Leap Motions hands to scale and add gestures
 * Add soundeffects
+* Make blocks glow on touch/during creation
 
 
 Stretched goal:
