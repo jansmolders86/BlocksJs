@@ -11,7 +11,7 @@ Done:
 * Physics
 * Generating blocks and planks
 * World look and feel
-* Initial integration with Leap Motion hands
+* Initial integration with Leap Motion hands (Running a recording to see hands interact with blocks)
 
 TODO:
 * Replace HTML buttons with ThreeJs rendered feedback
