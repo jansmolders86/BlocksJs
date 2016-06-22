@@ -16,6 +16,7 @@ Working:
 TODO:
 * Replace HTML buttons with ThreeJs rendered feedback
 * Get Leap Motions hands to scale and add gestures
+* Add soundeffects
 
 
 Stretched goal:
