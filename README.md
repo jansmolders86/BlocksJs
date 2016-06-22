@@ -5,7 +5,7 @@ Still very much a WIP
 
 Endgoal is a similar expierence as the Blocks Leap Motion demo.
 
-[![blocks](/images/blocks.gif)]
+![Blocks](/images/Blocks.gif?raw=true "Blocks")
 
 Done: 
 
