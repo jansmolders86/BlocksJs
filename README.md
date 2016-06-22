@@ -5,13 +5,13 @@ Still very much a WIP
 
 Endgoal is a similar expierence as the Blocks Leap Motion demo.
 
-Working: 
+Done: 
 
-* VR
+* Add VR support (boolean in HTML)
 * Physics
-* Generating blocks
-* world look and feel
-* initial integration with Leap Motion hands
+* Generating blocks and planks
+* World look and feel
+* Initial integration with Leap Motion hands
 
 TODO:
 * Replace HTML buttons with ThreeJs rendered feedback
