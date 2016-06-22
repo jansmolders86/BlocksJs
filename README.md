@@ -5,6 +5,8 @@ Still very much a WIP
 
 Endgoal is a similar expierence as the Blocks Leap Motion demo.
 
+[![blocks](/images/blocks.gif)]
+
 Done: 
 
 * Add VR support (boolean in HTML)
