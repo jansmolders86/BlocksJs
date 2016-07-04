@@ -34,11 +34,14 @@ window.addEventListener('resize', onWindowResize, false);
 
 window.widgets = new LeapWidgets(window.scene);
 widgets.initLeapHand(
-    {sampleRecording: 'recordings/knob.lz'}
+    {
+        scale: 0.09
+    }
 );
 
 // Scene
 //
+// var text = widgets.createLabel("LeapJS Widgets - Knob", new THREE.Vector3(0, wall.position.y+wall.geometry.parameters.height/2-16, wall.position.z+wall.geometry.parameters.depth/2+1), 16, 0xffffff);
 //
 //
 function init(event) {
@@ -145,24 +148,16 @@ function createSkyBox(){
 
 function setUpCamera(){
     camera = new THREE.PerspectiveCamera(
-        45,
+        50,
         window.innerWidth / window.innerHeight,
         1,
         10000
     );
-    camera.position.x = -50;
-    camera.position.y = 10;
-    camera.position.z = 20;
-    // camera.lookAt(scene.position);
-   // scene.add(camera);
+    camera.position.x = 1;
+    camera.position.y = 15;
+    camera.position.z = 40;
 
-    // setup camera handling
     controls = new THREE.OrbitControls(camera, element);
-    controls.target.set(
-        camera.position.x + 0.15,
-        camera.position.y,
-        camera.position.z
-    );
     controls.enablePan = true;
     controls.enableZoom = false;
 }
@@ -217,9 +212,12 @@ function createGround() {
     var ground = new Physijs.BoxMesh(
         new THREE.BoxGeometry(400, 1, 400),
         ground_material,
-        0 // mass
-    );
+        0, // mass
+        { restitution: 1,
+        friction:1}
+);
     ground.receiveShadow = true;
+    ground.setDamping(1,1);
     scene.add(ground);
 }
 
@@ -231,8 +229,8 @@ function createObject(type) {
             shading: THREE.FlatShading,
             wireframe: true,
             wireframeLinewidth : 20
-        },   .6, // medium friction
-        .3 // low restitution
+        },   1, // medium friction
+        0 // low restitution
     );
 
     if(type === 'box'){
